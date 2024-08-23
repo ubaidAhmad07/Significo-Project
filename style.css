@@ -1,0 +1,28 @@
+@font-face {
+    font-family: machina ;
+    src: url(./fonts/PPNeueMachina_\ Light.ttf);
+}
+@font-face {
+    font-family: machina-ink ;
+    src: url(./fonts/PP\ Neue\ Machina\ Inktrap\ Medium.ttf);
+}
+@font-face {
+    font-family: satoshi;
+    src: url(./fonts/Satoshi-Variable.ttf);
+}
+body[theme="black"]{
+    background-color: #000000;
+    color: white;
+}
+body[theme="white"]{
+    background-color: #ffffff;
+    color: black;
+}
+body[theme="salmon"]{
+    background-color: salmon;
+    color: rgb(83, 26, 20)
+}
+body[theme="cyan"]{
+    background-color: cyan;
+    color: rgb(34, 88, 88);
+}   
