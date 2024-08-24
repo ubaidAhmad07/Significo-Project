@@ -10,6 +10,9 @@
     font-family: satoshi;
     src: url(./fonts/Satoshi-Variable.ttf);
 }
+*::selection{
+    background-color: #EF9D71;
+}
 body[theme="black"]{
     background-color: #000000;
     color: white;
