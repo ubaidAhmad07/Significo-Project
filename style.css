@@ -26,6 +26,6 @@ body[theme="salmon"]{
     color: rgb(83, 26, 20)
 }
 body[theme="cyan"]{
-    background-color: cyan;
-    color: rgb(34, 88, 88);
+    background-color: #AEDEE0;
+    color: black;
 }   
