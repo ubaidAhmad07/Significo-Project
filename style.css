@@ -10,22 +10,34 @@
     font-family: satoshi;
     src: url(./fonts/Satoshi-Variable.ttf);
 }
+:root{
+    --salmon: #EF9D71;
+    --cyan :#AEDEE0;
+    --black :#000000;
+    --white :#ffffff;
+}
+
+
 *::selection{
     background-color: #EF9D71;
 }
 body[theme="black"]{
-    background-color: #000000;
+    background-color: var(--black);
     color: white;
 }
 body[theme="white"]{
-    background-color: #ffffff;
+    background-color: var(--white);
     color: black;
 }
 body[theme="salmon"]{
-    background-color: salmon;
-    color: rgb(83, 26, 20)
+    background-color:var(--salmon);
+    color: var(--black)
 }
 body[theme="cyan"]{
-    background-color: #AEDEE0;
+    background-color: var(--cyan);
     color: black;
 }   
+
+.video{
+    clip-path: circle(var(--clip) at center);
+}
