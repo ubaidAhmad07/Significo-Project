@@ -19,10 +19,12 @@ tl.to('.video',{
     scale :1,
     ease : Power2,
 }, 'a')
-.to('.left',{
-    x: -10,
+tl
+.to('.lft',{
+    xPercent: -10,
     stagger : 0.03,
 }, 'b')
-.to('.right',{
-    x: 10,
+.to('.rght',{
+    xPercent:10,
+    stagger : 0.03,
 }, 'b')
