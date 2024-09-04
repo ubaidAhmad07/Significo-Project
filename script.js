@@ -9,6 +9,16 @@ var  tl = gsap.timeline({
         pin : true
     },
 });
+var tl = gsap.timeline({
+    scrollTrigger : {
+        scroller : 'body',
+        trigger: '.cards h1',
+        start : 'top 50%',
+        end : 'bottom 40%',
+        scrub : 2,
+        markers: true,
+    },
+})
 
 
 tl.to('.video',{
@@ -28,3 +38,24 @@ tl
     xPercent:10,
     stagger : 0.03,
 }, 'b')
+
+tl.to('.c1',{
+    width : '80%',
+    backgroundColor : '#000000',
+    color : '#AEDEE0',
+})
+.to('.c2',{
+    width : '80%',
+    backgroundColor : '#000000',
+    color : '#AEDEE0',
+})
+.to('.c3',{
+    width : '80%',
+    backgroundColor : '#000000',
+    color : '#AEDEE0',
+})
+.to('.c4',{
+    width : '80%',
+    backgroundColor : '#000000',
+    color : '#AEDEE0',
+})
