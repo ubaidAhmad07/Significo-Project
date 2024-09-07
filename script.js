@@ -1,12 +1,12 @@
-gsap.set('.heros',{scale : 10})
+function homePageAnimation (){
+    gsap.set('.heros',{scale : 10})
 
 var  tl = gsap.timeline({
     scrollTrigger:{
         trigger:'.home',
         start:'top 0%',
-        end:'bottom top',
+        end:'bottom bottom',
         scrub:2,
-        pin : true
     },
 });
 
@@ -27,7 +27,9 @@ tl
     xPercent:10,
     stagger : 0.03,
 }, 'b')
-const cards = document.querySelectorAll(".cards")
+}
+function cardsAnimation () {
+    const cards = document.querySelectorAll(".cards")
 cards.forEach(function(card){
     gsap.to(card,{
         scrollTrigger : {
@@ -43,3 +45,44 @@ cards.forEach(function(card){
     })
     
 })
+}
+
+function page3Slider (){
+    gsap.to('.slide',{
+        scrollTrigger : {
+            trigger : '.page3',
+            start : 'top top',
+            end : 'bottom bottom',
+            scrub : 2,  
+        },
+        xPercent : '-300',
+        ease : Power2,
+    })
+    
+}
+function colorChange (){
+    document.querySelectorAll('.section')
+    .forEach(function (e){        
+        ScrollTrigger.create({
+            trigger : e,
+            start : 'top 50%',
+            end : 'bottom 50%',
+            onEnter : function (){
+                let body = document.body.setAttribute('theme' , e.dataset.color)
+                document.querySelector('.nav').setAttribute('theme', e.dataset.nav)  
+            },
+            onEnterBack : function () {
+                document.body.setAttribute('theme' , e.dataset.color)
+                document.querySelector('.nav').setAttribute('theme', e.dataset.nav)  
+
+            }
+        })
+    })
+}
+
+
+
+colorChange()
+homePageAnimation()
+cardsAnimation()
+page3Slider()

@@ -1,3 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: machina ;
     src: url(./fonts/PPNeueMachina_\ Light.ttf);
@@ -17,7 +22,12 @@
     --white :#ffffff;
 }
 
-
+body{
+    transition: background-color ease-out 0.5s;
+}
+.nav{
+    transition: background-color ease-out 0.5s;
+}
 *::selection{
     background-color: #EF9D71;
 }
@@ -38,6 +48,27 @@ body[theme="cyan"]{
     color: black;
 }   
 
+
+.nav[theme="transparent"]{
+    background-color: transparent;
+    color: white;
+}
+.nav[theme="white"]{
+    background-color: var(--white);
+    color: black;
+}
+.nav[theme="salmon"]{
+    background-color:var(--salmon);
+    color: var(--black)
+}
+.nav[theme="cyan"]{
+    background-color: var(--cyan);
+    color: black;
+}
+.nav[theme="black"]{
+    background-color: var(--black);
+    color: white;
+}
 .video{
     clip-path: circle(var(--clip) at center);
 }
